@@ -1,0 +1,10 @@
+Changed Nrmse to Standard deviation normalized version
+Originally range normalized error
+mor sensitive to deviations relative to the typical variation fo the signal
+r2 how much of the variation in the target signal can my predictions account for
+
+
+mackey glass und echte time series
+letzte analyseändern müsste für ne bessere performance?qubit
+ bei mackey ähnlich bei time series z-b bessere spin
+wie gate modell z.b verändenr das es auch auf time series

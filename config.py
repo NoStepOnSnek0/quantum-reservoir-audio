@@ -1,15 +1,14 @@
 import numpy as np
 
 # General parameters
-NUM_QUBITS = 8
-NUM_MEASUREMENTS = 128
+NUM_QUBITS = 6
 NUM_LAYERS = 3
-LEAK_RATE = 0.5
+LEAK_RATE = 0.7
 
 # "linear"   = chain: 0-1-2-3-...
 # "ring"     = chain + last-to-first connection
 # "all_to_all" = every qubit connected to every other qubit
-TOPOLOGY = "ring"
+TOPOLOGY = "linear"
 
 # Number of qubits receiving the input
 # "all" = all qubits(8 by default)
@@ -31,9 +30,12 @@ TIME_SERIES = "audio_medieval"
 # TIME_SERIES = "mackey"
 # TIME_SERIES = "audio_medieval"
 
-
+RESULT_MODE = "average"
+# "average"   = show mean ± standard deviation
+# "individual" = show every seed separately
 
 #fixed inputs
+NUM_MEASUREMENTS = 128
 WASHOUT = 30
 MAX_SEQUENCE_LENGTH = 1000
 TRAIN_SIZE = 700
@@ -45,7 +47,8 @@ MEMORY_STRENGTH = 0.5
 # Spin specific
 EVOLUTION_TIME = 1.0
 #Seeds
-SEEDS = [1,2,3,4,5]
+SEEDS = [1]
+
 
 #offset {-2,+2} theoretically however I only use 0 and +1
 PREDICTION_OFFSET = 0
@@ -55,7 +58,7 @@ PREDICTION_OFFSET = 0
 # General parameters
 
 #NUM_QUBITS = 8
-#NUM_MEASUREMENTS = 128
+
 #WASHOUT = 30
 #NUM_LAYERS = 3
 
@@ -81,7 +84,12 @@ PREDICTION_OFFSET = 0
 # TIME_SERIES = "mackey"
 # TIME_SERIES = "audio_medieval"
 
+#RESULT_MODE = "individual"
+# "average"   = show mean ± standard deviation
+# "individual" = show every seed separately
+
 #fixed inputs
+#NUM_MEASUREMENTS = 128
 #MAX_SEQUENCE_LENGTH = 1000
 #TRAIN_SIZE = 700
 #TEST_SIZE = 250
@@ -92,3 +100,6 @@ PREDICTION_OFFSET = 0
 #EVOLUTION_TIME = 1.0
 #SEEDS = [1, 2, 3,4,5]
 
+
+#offset {-2,+2} theoretically however I only use 0 and +1
+#PREDICTION_OFFSET = 0
